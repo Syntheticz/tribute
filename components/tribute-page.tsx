@@ -86,12 +86,18 @@ export default function TributePage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-8">Biography</h2>
           <p className="text-lg mb-8">
-            [Name] was born in [birthplace] on [birthdate]. From an early age,
-            they showed a keen interest in [field/subject], which would later
-            become their life's passion. Throughout their formative years,
-            [Name] faced numerous challenges, including [challenge 1] and
-            [challenge 2], but these experiences only served to strengthen their
-            resolve and shape their character.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor,
+            numquam quasi iusto commodi ad iure culpa perferendis eligendi,
+            atque aperiam sequi nam, dolorem dolore cupiditate! Saepe esse, iure
+            aliquid amet numquam quae animi quaerat maiores neque, tempore
+            corporis ea. Exercitationem, quasi? Fugit dolores, molestiae itaque,
+            mollitia doloribus numquam deleniti eum debitis totam assumenda
+            natus dolorem quae nobis libero asperiores delectus cupiditate.
+            Delectus aperiam voluptas at voluptatibus earum. Corrupti excepturi
+            velit veritatis officiis vitae laboriosam ducimus blanditiis
+            pariatur doloremque voluptate dolor autem, dolore quae saepe in!
+            Reprehenderit odio minima odit harum corrupti tempore accusamus
+            voluptas, unde, autem magni nemo quos cum.
           </p>
           <Parallax translateY={[-10, 10]} className="mb-8">
             <Image
@@ -111,20 +117,34 @@ export default function TributePage() {
           <h2 className="text-4xl font-bold mb-8">Achievements</h2>
           <ul className="list-disc list-inside text-lg mb-8 space-y-4">
             <li>
-              [Achievement 1] - In [year], [Name] accomplished [description of
-              achievement].
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint,
+              nulla!
             </li>
             <li>
-              [Achievement 2] - [Name]'s groundbreaking work in [field] led to
-              [result/impact].
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+              tempore repudiandae corrupti, earum aliquam sint et aliquid natus
+              alias fugiat explicabo veniam consequuntur nemo pariatur labore
+              maxime neque non, asperiores, optio ullam incidunt nam? Explicabo
+              ullam cupiditate voluptatibus alias porro, expedita iste illo eius
+              sapiente pariatur provident est quibusdam reiciendis commodi in,
+              harum quaerat. Rerum doloribus dolorem maxime. Nobis sequi culpa
+              quam quo ullam doloremque. Totam, nesciunt numquam ipsum
+              repellendus officiis mollitia quia veniam, cum quis est id harum
+              atque?
             </li>
             <li>
-              [Achievement 3] - Recognized for their contributions, [Name] was
-              awarded [award name] in [year].
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+              placeat provident rerum saepe ab sit quas laboriosam? Perspiciatis
+              libero inventore maxime corporis expedita obcaecati pariatur
+              dolorum consectetur sed, magnam iste non neque, culpa atque rem!
+              Commodi delectus doloremque aspernatur repellendus ullam,
+              perspiciatis deleniti minima. Pariatur veniam reiciendis officiis
+              doloremque explicabo!
             </li>
             <li>
-              [Achievement 4] - [Name]'s [invention/discovery] revolutionized
-              [industry/field].
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+              in fugit, natus iusto qui explicabo neque modi quaerat.
+              Laudantium, asperiores.
             </li>
           </ul>
           <Parallax translateY={[-10, 10]} className="mb-8">
@@ -144,11 +164,10 @@ export default function TributePage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-8">Contributions</h2>
           <p className="text-lg mb-8">
-            [Name]'s contributions to [field/industry] have been both profound
-            and far-reaching. Their work has not only advanced our understanding
-            of [subject], but has also paved the way for [future
-            developments/applications]. Some of their most significant
-            contributions include:
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+            reprehenderit incidunt harum possimus illum eaque facilis iusto,
+            eius voluptatum deserunt, voluptas itaque inventore libero quibusdam
+            quas velit in! Autem, ea.
           </p>
           <ul className="list-disc list-inside text-lg mb-8 space-y-4">
             <li>[Contribution 1] - This led to [impact/result].</li>
@@ -179,20 +198,25 @@ export default function TributePage() {
           <h2 className="text-4xl font-bold mb-8">Fun Facts</h2>
           <ul className="list-disc list-inside text-lg mb-8 space-y-4">
             <li>
-              [Name] was an avid [hobby] enthusiast and once [interesting
-              anecdote related to hobby].
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+              perspiciatis distinctio, natus pariatur laborum mollitia ut id
+              deserunt recusandae ipsum voluptas omnis voluptatem veniam
+              laboriosam voluptate asperiores porro officia est!
             </li>
             <li>
-              Despite their serious work, [Name] was known for their
-              [personality trait], often [funny habit or story].
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Consequatur, totam.
             </li>
             <li>
-              In their spare time, [Name] enjoyed [unexpected interest or
-              activity].
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+              deleniti modi quisquam tempore quaerat doloribus minus saepe aut
+              sint facilis.
             </li>
             <li>
-              [Name]'s favorite quote was "[quote]", which they often referenced
-              in their work and personal life.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+              repellat sunt numquam alias atque eveniet fuga architecto placeat
+              ea excepturi nesciunt quos incidunt explicabo similique
+              reprehenderit nostrum, dolorem aperiam ipsam.
             </li>
             <li>
               Little known fact: [Name] almost pursued a career in [unrelated
