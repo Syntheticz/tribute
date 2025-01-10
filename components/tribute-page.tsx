@@ -15,14 +15,160 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import {
   Bookmark,
   BookOpen,
+  Edit,
   Feather,
   Gavel,
+  Globe,
   GraduationCap,
   MapPin,
+  Sword,
+  Music,
+  Heart,
+  Leaf,
+  Pen,
+  Atom,
 } from "lucide-react";
 import { Separator } from "./ui/separator";
+import { GalleryItem } from "./gallery-item";
+import Home from "@/public/home.jpg";
+import Gomburza from "@/public/gomburza.jpg";
+import Ateneo from "@/public/ateneo.jpg";
+import Facade from "@/public/facade.jpg";
+import Water from "@/public/water.jpg";
+import Bracken from "@/public/bracken.jpg";
+import Self15 from "@/public/self15.jpg";
+import Undergraduate from "@/public/undergraduate.png";
+import Usman from "@/public/usman.jpg";
+import Prison from "@/public/prison.jpg";
+import Trial from "@/public/trial.jpg";
+import Martyr from "@/public/martyr.jpg";
+import Coat from "@/public/coat.jpg";
 
 export default function TributePage() {
+  const galleryItems = [
+    {
+      id: 1,
+      title: "Birthplace in Calamba, Laguna",
+      description: [],
+      imageUrl: Home,
+      width: 400,
+      height: 300,
+    },
+    {
+      id: 2,
+      title:
+        "Illustration of Fathers Mariano Gomez, Jose Burgos, and Jacinto Zamora",
+      description: [],
+      imageUrl: Gomburza,
+      width: 400,
+      height: 600,
+    },
+    {
+      id: 3,
+      title:
+        "A photo of the Ateneo Municipal de Manila campus or its classrooms during Rizal's time",
+      description: [],
+      imageUrl: Ateneo,
+      width: 600,
+      height: 400,
+    },
+    {
+      id: 4,
+      title: "The facade of UST's historic main building",
+      description: [],
+      imageUrl: Facade,
+      width: 400,
+      height: 500,
+    },
+    {
+      id: 5,
+      title: "The water supply system Rizal constructed in Dapitan",
+      description: [],
+      imageUrl: Water,
+      width: 500,
+      height: 300,
+    },
+    {
+      id: 6,
+      title: "Historical photographs of Josephine Bracken",
+      description: [],
+      imageUrl: Bracken,
+      width: 600,
+      height: 400,
+    },
+    {
+      id: 7,
+      title: "Self Portrait, aged about 15",
+      description: [
+        'According to Ambeth Ocampo, the image is a reproduction in Austin Craig\'s 1913 book, "Life, Lineage and Labors of Jose Rizal," with the original portrait believed to have been lost or destroyed during the 1945 Battle of Manila.',
+      ],
+      imageUrl: Self15,
+      width: 500,
+      height: 300,
+    },
+    {
+      id: 8,
+      title: "Rizal. Undergraduate, 1879",
+      description: [],
+      imageUrl: Undergraduate,
+      width: 500,
+      height: 300,
+    },
+    {
+      id: 9,
+      title:
+        "Usman—one of the notable pets of young Jose Rizal in Calamba, Laguna",
+      description: ["Photo by Celestino Palma III."],
+      imageUrl: Usman,
+      width: 500,
+      height: 300,
+    },
+    {
+      id: 10,
+      title: "Prison Cell of Jose Rizal",
+      description: [
+        "The prison cell of Dr. José Rizal in Fort Santiago, Intramuros, is one of the most historically significant sites in the Philippines. This cell was where Rizal was detained from November 3, 1896, until the morning of his execution on December 30, 1896.",
+      ],
+      imageUrl: Prison,
+      width: 500,
+      height: 300,
+    },
+    {
+      id: 11,
+      title: "Silid Paglilitis (Trial Room)",
+      description: [
+        "This room depicts the trial that took place at Cuartel de España, a former Jesuit compound now occupied by the Pamantasan ng Lungsod ng Maynila, where a military court convicted Rizal of forming an illicit organization and inciting rebellion.",
+        "The Silid Paglilitis represents the military trial of Rizal, which took place in December 1896 during the height of the Philippine Revolution.",
+        'Rizal was accused of being the primary instigator of rebellion due to his writings, particularly "Noli Me Tangere" and "El Filibusterismo", and alleged ties to the revolutionary Katipunan organization.',
+        "Despite the lack of concrete evidence tying him directly to the rebellion, Rizal was found guilty of sedition, rebellion, and forming an illegal organization by a Spanish military tribunal.",
+      ],
+      imageUrl: Trial,
+      width: 500,
+      height: 300,
+    },
+    {
+      id: 12,
+      title: "The Martyrdom of Jose Rizal",
+      description: [
+        "The Martyrdom of Rizal Mural, done in 1960 is one of the best known works of Carlos “Botong” V. Francisco, Philippine National Artist for Visual Arts in 1973. Francisco is best known for his landmark murals depicting some of the Philippine historical events. The mural depicts the execution of Philippine National Hero Dr. Jose Rizal at Bagong Bayan (now Rizal Park) on December 30, 1896.",
+      ],
+      imageUrl: Martyr,
+      width: 500,
+      height: 300,
+    },
+    {
+      id: 13,
+      title: "Rizal's coat, hat, and case",
+      description: [
+        "José Rizal's coat, hat, and travel case displayed in the Museo ni Rizal are among the most iconic personal artifacts preserved to give us a glimpse of his life, values, and travels. These items symbolize Rizal's identity not only as a revolutionary thinker but also as a traveler, scholar, and a well-dressed intellectual of his time.",
+        "Rizal lived during a time when formal dress was a reflection of social standing and education. His attire indicated his position as an upper-class Filipino (illustrado), educated in Europe, and a person of influence in the Propaganda Movement.",
+      ],
+      imageUrl: Coat,
+      width: 500,
+      height: 300,
+    },
+  ];
+
   const educationStages = [
     {
       id: "early-education",
@@ -193,7 +339,7 @@ export default function TributePage() {
     {
       icon: <MapPin className="w-6 h-6 text-primary" />,
       title:
-        "Rizal also studied in London, spending time from May 1888 to March 1889. He chose London because his main goals were to improve his knowledge of the English language, study and annotate Antonio de Morga's Sucesos de Las Islas Filipinas, and safely carry out his fight against Spanish tyranny from abroad.",
+        "Rizal was the real “Jack the Ripper”-a serial killer believed to be active in Whitechapel in 1888.",
 
       myth: "Jose Rizal was the real “Jack the Ripper”-both with initials “J.R.” Jack the Ripper was an unidentified serial killer who was believed to be active in Whitechapel district of London in 1888. His victims were dismembered with surgical precision, prompting investigators to assume the Ripper had a background in human anatomy. Coincidentally, the killings occurred at the time Rizal was in London, and stopped when he left.",
       truth:
@@ -226,6 +372,81 @@ export default function TributePage() {
       truth:
         "Many scholars agree that Rizal was familiar with brothels and the amusements in Europe. But Adolf Hitler was born in 1889. Rizal's alleged one-night stand with the Austrian woman allegedly occurred in 1887. If both are true, then it means Hitler was born two years delayed, which was highly unlikely.",
     },
+    {
+      icon: <Globe className="w-6 h-6 text-primary" />,
+      title: "Rizal fathered Adolf Hitler while visiting Austria in 1887.",
+
+      myth: "Maximo Viola wrote in one of his diary entries about a one-night stand Rizal allegedly had with an Austrian prostitute while visiting Austria in May 1887. Adolf Hitler, also an Austrian, was born not long after the passionate encounter, suggesting Rizal was the father of Adolf Hitler.",
+      truth:
+        "Many scholars agree that Rizal was familiar with brothels and the amusements in Europe. But Adolf Hitler was born in 1889. Rizal’s alleged one-night stand with the Austrian woman allegedly occurred in 1887. If both are true, then it means Hitler was born two years delayed, which was highly unlikely.",
+    },
+    {
+      icon: <Sword className="w-6 h-6 text-primary" />,
+      title: "Rizal was a skilled fencer and shooter.",
+
+      myth: "Rizal was unbeatable in fencing and shooting, making him a feared opponent in duels.",
+      truth:
+        "Rizal was highly skilled in both disciplines, but he used them mainly as hobbies and for physical fitness. There is no record of Rizal ever engaging in an actual duel.",
+    },
+    {
+      icon: <Edit className="w-6 h-6 text-primary" />,
+      title:
+        "Rizal's sketches are considered the first Filipino political cartoons.",
+
+      myth: "Rizal published his cartoons in newspapers to critique Spanish colonial rule.",
+      truth:
+        "Rizal's political cartoons were private sketches shared among close friends. They highlighted social issues but were never publicly distributed.",
+    },
+    {
+      icon: <Music className="w-6 h-6 text-primary" />,
+      title: "Rizal developed a love for opera and classical music.",
+
+      myth: "Rizal performed in operas during his time in Europe.",
+      truth:
+        "While Rizal enjoyed attending operas and admired classical music, he was not a performer. His favorite operatic works were by Verdi and Wagner.",
+    },
+    {
+      icon: <Heart className="w-6 h-6 text-primary" />,
+      title: "Rizal was an advocate for women's rights.",
+
+      myth: "Rizal had numerous affairs with women but did not care about women's empowerment.",
+      truth:
+        "Rizal was a progressive thinker who advocated for gender equality, including writing about the importance of women's education and rights.",
+    },
+    {
+      icon: <Leaf className="w-6 h-6 text-primary" />,
+      title: "Rizal was a lover of nature and gardening.",
+
+      myth: "Rizal was entirely committed to intellectual pursuits and activism.",
+      truth:
+        "During his exile in Dapitan, Rizal became interested in gardening and botany, growing various plants and even experimenting with farming techniques. His love of nature provided an escape from his political concerns.",
+    },
+    {
+      icon: <Pen className="w-6 h-6 text-primary" />,
+      title: "Rizal was a talented sculptor.",
+
+      myth: "Rizal's artistic pursuits were limited to sketching and painting.",
+      truth:
+        'Other than sketching and painting, Rizal was also a talented sculptor and created notable works, including "The Mother\'s Revenge," which symbolizes Filipino resilience against oppression.',
+    },
+    {
+      icon: <BookOpen className="w-6 h-6 text-primary" />,
+      title:
+        "Rizal's mother was his first teacher and greatly influenced his early education and character development.",
+
+      myth: "Doña Teodora Alonso Realonda only taught Rizal the basics of reading, writing, and prayers, which provides a simple foundation for his later education.",
+      truth:
+        "While Doña Teodora did teach Rizal the alphabet, basic prayers, and early reading, her influence went far beyond simple instruction. She was a well-educated woman for her time and instilled in Rizal a love for learning, poetry, and critical thinking. She recognized his exceptional intelligence and nurtured his intellectual curiosity from a very young age. She told him stories, encouraged him to write poetry, and taught him proper conduct and values. Her influence was crucial in shaping Rizal's character, intellectual development, and eventual pursuit of knowledge and reform.",
+    },
+    {
+      icon: <Atom className="w-6 h-6 text-primary" />,
+      title:
+        "Rizal was one of the first Asians to be part of a European scientific society.",
+
+      myth: "Rizal was commissioned by the Spanish government to modernize the town with infrastructure projects.",
+      truth:
+        "During his exile, Rizal independently created a detailed map of Dapitan, showcasing his skills in geography and urban planning. He also designed and helped construct a gravity-fed water supply system that provided clean drinking water to the community—an impressive contribution that improved the town's quality of life.",
+    },
   ];
 
   const [isScrolled, setIsScrolled] = useState(false);
@@ -255,7 +476,18 @@ export default function TributePage() {
                   isScrolled ? "text-gray-800" : "text-white"
                 }`}
               >
-                José Rizal
+                <Link
+                  to={"hero"}
+                  smooth={true}
+                  duration={500}
+                  className={`cursor-pointer ${
+                    isScrolled
+                      ? "text-gray-800 hover:text-gray-600"
+                      : "text-white hover:text-gray-300"
+                  } px-3 py-2 rounded-md  font-medium`}
+                >
+                  José Rizal
+                </Link>
               </span>
             </div>
             <div className="hidden md:block">
@@ -266,6 +498,7 @@ export default function TributePage() {
                   "Achievements",
                   "Relationships",
                   "Fun Facts",
+                  "Gallery",
                 ].map((item) => (
                   <Link
                     key={item}
@@ -288,7 +521,7 @@ export default function TributePage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-screen overflow-hidden">
+      <section id="hero" className="relative h-screen overflow-hidden">
         <Parallax translateY={[-20, 20]} className="absolute inset-0">
           <Image
             src={Rizal}
@@ -434,34 +667,50 @@ export default function TributePage() {
           <h2 className="text-4xl font-bold mb-8">Achievements</h2>
           <ul className="list-disc list-inside text-lg mb-8 space-y-4">
             <li>
-              Rizal penned To the Filipino Youth when he was eighteen and
+              Rizal penned ‘To the Filipino Youth’ when he was eighteen and
               studying at UST. He submitted the literary poem written in Spanish
               in a contest held by the Manila Lyceum of Art of Literature and
               garnered first prize. This piece showcases strong messages to
               convince the youth that they are the hope of the nation. Rizal
-              further stresses the importance of education in relation to
-              one&apos;s future.
+              further stresses the importance of education in relation to one’s
+              future.
             </li>
             <li>
               Rizal gained respect among European intellectuals and reformists,
-              including Ferdinand Bluementritt who became his close friend and
+              including Ferdinand Blumentritt who became his close friend and
               ally in advocating human rights.
             </li>
             <li>
               During his exile in Dapitan, Rizal conducted scientific studies
-              and discovered several species of flora and fauna.
+              and discovered several species of flora and fauna, including the
+              Draco rizali (flying lizard), the Rachophorus rizali (a tree
+              frog), and two beetle species, the Spathomeles rizali (a.k.a. the
+              &quot;handsome fungus beetle&quot;) and the Apogonia rizali (a
+              flying beetle).
             </li>
             <li>
-              Rizal designed and helped construct a water supply system during
-              his exile in Dapitan, benefiting the local community and
-              demonstrating his engineering skills.
+              Rizal designed and helped construct a water supply system using
+              bamboo pipes to bring clean water from a higher elevation to the
+              town during his exile in Dapitan, benefiting the local community
+              and demonstrating his engineering skills.
             </li>
             <li>
               Rizal&apos;s martyrdom, through his execution by the Spanish
               authorities, further fueled the flames of revolution in the
               Philippines. His death served as a rallying cry for Filipinos to
               continue the fight for independence and galvanized the movement
-              towards nationhood and self-determination.
+              towards nationhood and self-determination
+            </li>
+            <li>
+              At 19, José Rizal became the first Filipino to win a major
+              literary award from Manila&apos;s Liceo Artistico-Literario. His
+              play, El Consejo de los Dioses (&quot;The Council of the
+              Gods&quot;), used Greek and Roman mythology to explore modern
+              issues, reflecting his intellectual depth and offering a subtle
+              critique of colonialism. This achievement not only highlighted
+              Rizal&apos;s literary brilliance but also signaled the emerging
+              voice of Filipinos in a colonial society, foreshadowing his
+              pivotal role in the nation&apos;s awakening.
             </li>
           </ul>
           <div className="relative h-96 rounded-lg overflow-hidden shadow-lg mb-8">
@@ -550,6 +799,25 @@ export default function TributePage() {
             ))}
           </CardContent>
         </Card>
+      </section>
+
+      <section id="gallery" className="py-20">
+        <div className="container mx-auto px-4 py-8">
+          <h1 className="text-3xl font-bold mb-8 text-center">Gallery</h1>
+
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-4">
+            {galleryItems.map((item) => (
+              <GalleryItem
+                key={item.id}
+                title={item.title}
+                description={item.description}
+                imageUrl={item.imageUrl}
+                width={item.width}
+                height={item.height}
+              />
+            ))}
+          </div>
+        </div>
       </section>
     </div>
   );
