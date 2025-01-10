@@ -109,7 +109,7 @@ export default function TributePage() {
     {
       id: 8,
       title: "Rizal. Undergraduate, 1879",
-      description: [],
+      description: ["Photo by Celestino Palma III."],
       imageUrl: Undergraduate,
       width: 500,
       height: 300,
@@ -118,7 +118,7 @@ export default function TributePage() {
       id: 9,
       title:
         "Usman—one of the notable pets of young Jose Rizal in Calamba, Laguna",
-      description: ["Photo by Celestino Palma III."],
+      description: [],
       imageUrl: Usman,
       width: 500,
       height: 300,
